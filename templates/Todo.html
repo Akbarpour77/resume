@@ -1,0 +1,13 @@
+{% extends  "base.html" %}
+{% block body_block %}
+
+<div class="container jumbotron">
+    <form action="" method="post" enctype="multipart/form-data">
+
+        {{ forms.as_p}}
+        <input type="submit" value="Create">
+    </form>
+    {% csrf_token %}
+</div>
+{% endblock %}
+

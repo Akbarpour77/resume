@@ -1,0 +1,20 @@
+{% extends  "base.html" %}
+{% block body_block %}
+<div class="container">
+    <div  class="jumbotron">
+        {% if registered %}
+
+        {% else %}
+          <form enctype="multipart/form-data" method="POST">
+              {% csrf_token %}
+              {{ forms.as_p }}
+              {{ form_profile.as_p}}
+              <input type="submit" value="Register">
+    </form>
+        {%endif%}
+    </div>
+
+</div>
+
+
+{% endblock %}
